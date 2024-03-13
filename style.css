@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mulish', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --color-base-blue-100: #387E96;
+    --color-base-blue-200:#065E7C;
+    --color-base-white: #ffffff;
+    --color-base-black: #1E1E1E;
+    --color-base-gray: #202024;
+}
+
+.blog {
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-base-blue-200);
+    height: 7.2rem;
+}
+
+header .header-wrapper {
+    display: grid;
+    grid-template-columns: 42px 1fr 42px;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+header img {
+    height: 4.2rem;
+    width: 4.2rem;
+    border-radius: 100%;
+}
+
+header label {
+    width: 1px;
+    height: 1px;
+    overflow:hidden;
+    position:absolute;
+}
+
+header input {
+    font-family: 'Mulish', sans-serif;
+    border: none;
+    border-radius: 4px;
+    width: 23.6rem;
+    background-color: var(--color-base-blue-100);
+    color: var(--color-base-white);
+    padding: 1.2rem 1.6rem 1.2rem 1.4rem;
+}
+
+header input::placeholder {
+    color: var(--color-base-white);
+}
+
+.container p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+.container img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.main-articles {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    row-gap: 3rem;
+    padding: 3rem 2.4rem;
+}
+
+.main-articles .articles-wrapper {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.main-principal {
+    padding: 3rem 2.4rem;
+}
+
+.main-principal img {
+    width: 100%;    
+    object-fit: cover;
+}
+
+h1 {
+    font-size:2.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.button {
+    display: flex;
+    gap: 1.2rem;
+}
+
+button {
+    background-color: var(--color-base-blue-200);
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    padding: 1.2rem;
+    border-radius: 100%;
+    border: none;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    background-color: var(--color-base-blue-100);
+}
+
+input:focus-visible {
+    outline: none;
+}   
+
+.button-up {
+    background-image: url(./assets/positive.svg);
+    background-repeat: no-repeat;
+}
+
+.button-down {
+    background-image: url(./assets/negative.svg);
+    background-repeat: no-repeat;
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2rem;
+    color: var(--color-base-gray);
+    margin: 0;  
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2rem;
+    color: var(--color-base-gray);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+h3:hover {
+    color: var(--color-base-blue-200)
+}
+
+.card p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.figure img {
+    width: 15.0rem;
+    height: 8.4rem;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: filter 0.5s ease;
+}
+
+.figure img:hover {
+    filter: grayscale(100%);
+}
+
+.figure {
+    display: flex;
+    flex-direction: row;
+    gap: 1.6rem;
+    margin-bottom: 3.2rem;
+}
+
+footer {
+    background-color: var(--color-base-blue-100);
+    height: 6.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    font-weight: 400;
+    color: var(--color-base-white); 
+}
+
+
+@media (min-width: 900px) {
+    header .header-wrapper {
+        width: 122.0rem;
+    }
+
+    header input {
+        width: 100%;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .container  {
+        margin: 40px 0;
+        max-width: 122.0rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 3.4rem;
+    }
+
+    .principal img {
+        max-width: 80.3rem;
+        max-height: 40.5rem;
+        border-radius: 5px;
+    }
+
+    .principal {
+        max-width: 80.0rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+
+    .h1-and-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .main-principal {
+        padding: 0;
+    }
+
+    .main-principal p {
+        margin-bottom: 4.0rem;
+    }
+
+    .main-articles {
+        padding: 0;
+    }
+    
+}
